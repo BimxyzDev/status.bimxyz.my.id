@@ -5,5 +5,12 @@
     "status": "critical",
     "image": "https://uploader.bimxyz.my.id/image/ggnq3yyr.jpg",
     "text": "Node VIP saat ini masih dalam status terkunci (suspended) otomatis oleh sistem provider akibat lonjakan CPU hingga 100% lebih sejak kemarin. Perlu kami tegaskan bahwa kejadian ini murni disebabkan oleh serangan dari luar, bukan karena kesalahan dari pihak admin karena adanya pengguna/server yang melakukan abuse. Email banding teknis beserta rencana mitigasi (Systemd limits & rate-limiting) sudah resmi dikirimkan ke pihak provider. Karena saat ini memasuki akhir pekan, proses pembukaan gembok server sedang menunggu antrean tim support mereka aktif kembali. Estimasi waktu pemulihan memakan waktu sekitar 2 hingga 5 hari. Semua data Anda dipastikan aman, dan layanan akan langsung online begitu suspensi dicabut. Terima kasih atas pengertian dan kesabaran Anda."
+  },
+  {
+  "date": "2026-07-11T11:26:00+07:00",
+  "title": "Serangan HTTP Flood Terdeteksi dan Berhasil Ditangani",
+  "status": "resolved",
+  "image": "https://uploader.bimxyz.my.id/image/wl4sl35d.jpg",
+  "text": "Pada tanggal 11 Juli 2026 sekitar pukul 11.56 - 12.26 WIB, sistem kami mendeteksi lonjakan penggunaan CPU pada server panel akibat serangan HTTP flood dari satu alamat IP yang membuka ratusan koneksi secara bersamaan ke server kami. Tim kami segera melakukan investigasi, memblokir sumber serangan, dan memastikan seluruh layanan kembali stabil. Tidak ada data pengguna yang terdampak atau berisiko selama insiden ini. Laporan resmi telah kami ajukan ke penyedia layanan cloud terkait untuk tindak lanjut."
   }
 ]
