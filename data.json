@@ -12,5 +12,12 @@
   "status": "resolved",
   "image": "https://uploader.bimxyz.my.id/image/wl4sl35d.jpg",
   "text": "Pada tanggal 11 Juli 2026 sekitar pukul 11.56 - 12.26 WIB, sistem kami mendeteksi lonjakan penggunaan CPU pada server panel akibat serangan HTTP flood dari satu alamat IP yang membuka ratusan koneksi secara bersamaan ke server kami. Tim kami segera melakukan investigasi, memblokir sumber serangan, dan memastikan seluruh layanan kembali stabil. Tidak ada data pengguna yang terdampak atau berisiko selama insiden ini. Laporan resmi telah kami ajukan ke penyedia layanan cloud terkait untuk tindak lanjut."
+  },
+  {
+  "date": "2026-07-12T10:52:00+07:00",
+  "title": "Penggantian VPS Node VIP & Maintenance Node 1 Selesai",
+  "status": "resolved",
+  "image": "https://uploader.bimxyz.my.id/image/upload-yvw5.jpg",
+  "text": "Kami telah menyelesaikan migrasi Node VIP ke VPS baru guna mempercepat pemulihan layanan, alih-alih menunggu proses pembukaan suspensi dari pihak provider. Selain itu, maintenance rutin pada Node 1 (Basic) untuk menjaga performa dan stabilitas server juga telah selesai dilakukan. Seluruh layanan kini kembali berjalan normal. Terima kasih atas kesabaran dan pengertian Anda."
   }
 ]
