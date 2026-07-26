@@ -19,5 +19,13 @@
   "status": "resolved",
   "image": "https://uploader.bimxyz.my.id/image/upload-yvw5.jpg",
   "text": "Kami telah menyelesaikan migrasi Node VIP ke VPS baru guna mempercepat pemulihan layanan, alih-alih menunggu proses pembukaan suspensi dari pihak provider. Selain itu, maintenance rutin pada Node 1 (Basic) untuk menjaga performa dan stabilitas server juga telah selesai dilakukan. Seluruh layanan kini kembali berjalan normal. Terima kasih atas kesabaran dan pengertian Anda."
+  },
+  {
+  "date": "2026-07-26T13:00:00+07:00",
+  "title": "Migrasi Node Baru & Penindakan Pelanggaran ToS Selesai",
+  "status": "resolved",
+  "image": "https://uploader.bimxyz.my.id/image/upload-ykfa.jpg",
+  "text": "Kami telah menyelesaikan proses penindakan tegas terhadap server yang melanggar ToS (aktivitas DDoS) serta menyelesaikan migrasi Node ke VPS baru untuk memastikan kestabilan dan keamanan seluruh layanan. Seluruh server yang terdampak kini telah aktif kembali di environment yang baru. Harap diingat untuk selalu melakukan backup data secara berkala. Terima kasih atas pengertian dan kerja sama Anda."
   }
+  
 ]
