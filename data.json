@@ -32,6 +32,6 @@
     "title": "Gangguan server reguler/basic",
     "status": "critical",
     "image": "https://www.bimxyz.my.id/image/status-1785901384449.jpg",
-    "text": "Saat ini server masih mengalami gangguan dari provider, yang penyebabnya masih belum diketahui."
+    "text": "PEMBERITAHUAN GANGGUAN JARINGAN (NODE 1 / BASIC)\n\nStatus: Sedang Dalam Penanganan\nWaktu Kejadian: Rabu, 5 Agustus 2026 - Pukul 06.00 WIB\nLayanan Terdampak: Node 1 (Basic)\n\n---\n\nINFORMASI GANGGUAN\nTerjadi gangguan pada infrastruktur jaringan dari pihak Data Center / Provider Utama yang berdampak pada server Node 1 (Basic).\n\nSTATUS PROSES PEMULIHAN\n- Segmen IP 157: Sebagian server telah kembali beroperasi secara bertahap.\n- Segmen IP 203: Masih dalam tahap perbaikan oleh tim teknis Data Center.\n\nESTIMASI WAKTU SELESAI\nPemulihan diperkirakan selesai antara nanti malam hingga besok siang atau sore (6 Agustus 2026).\n\n---\n\nIMBAUAN PENGGUNA\n1. Harap tidak mengubah data atau konfigurasi server selama pemeliharaan berlangsung.\n2. Pembaruan status akan diperbarui secara berkala pada halaman ini.\n\nKami memohon maaf atas ketidaknyamanan yang terjadi. Terima kasih atas kesabaran dan kerja sama Anda.\n\nTim Support Bimxyz"
   }
 ]
