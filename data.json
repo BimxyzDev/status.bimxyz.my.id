@@ -30,8 +30,8 @@
   {
     "date": "2026-08-05T03:43:14.085Z",
     "title": "Gangguan server reguler/basic",
-    "status": "critical",
-    "image": "https://www.bimxyz.my.id/image/status-1785901384449.jpg",
-    "text": "[UPDATE PEMULIHAN NODE 1] Menindaklanjuti insiden malware pada server utama yang mengganggu infrastruktur jaringan dari Data Center/Provider, saat ini proses pemulihan telah menunjukkan kemajuan signifikan—segmen IP 157 dinyatakan telah kembali online dan beroperasi normal, sedangkan untuk segmen IP 203 masih dalam tahap pemulihan bertahap di mana beberapa server sudah berhasil diaktifkan kembali, namun sebagian lainnya masih offline dan tengah ditangani secara intensif oleh tim teknis. Kami mengimbau seluruh pengguna untuk tetap tidak melakukan perubahan data atau konfigurasi server selama proses pemulihan berlangsung guna menjaga stabilitas sistem, dengan target penyelesaian seluruh segmen secara bertahap hingga batas maksimal Sabtu, 8 Agustus 2026. Kami menyampaikan permohonan maaf atas ketidaknyamanan yang berlanjut dan mengucapkan terima kasih yang sebesar-besarnya atas kesabaran serta kepercayaan Anda. - Tim Support Bimxyz"
+    "status": "operational",
+    "image": "https://www.bimxyz.my.id/image/status-1786151380374.jpg",
+    "text": "[STATUS PEMULIHAN AKHIR] Seluruh segmen server utama (IP 157 & 203) kini telah berhasil dipulihkan dan kembali online secara penuh—kami tegaskan bahwa infrastruktur server fisik dan virtual dalam kondisi aman, tidak terhapus, serta beroperasi normal. Namun, sebagai konsekuensi dari proses karantina dan pembersihan malware secara agresif pada sistem file, dengan menyesal kami informasikan bahwa sebagian besar data dan dokumen pengguna pada segmen yang terdampak dinyatakan hilang permanen dan tidak dapat direcovery. Kami sangat menyarankan seluruh pengguna untuk segera memeriksa integritas sistem masing-masing serta melakukan restorasi data dari cadangan (backup) terbaru yang tersedia. Kami menyampaikan permohonan maaf yang sebesar-besarnya atas kehilangan data ini dan mengucapkan terima kasih yang tulus atas pengertian, kepercayaan, serta kesabaran Anda selama masa pemulihan. - Tim Support Bimxyz"
   }
 ]
