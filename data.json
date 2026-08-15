@@ -33,5 +33,12 @@
     "status": "resolved",
     "image": "https://www.bimxyz.my.id/image/status-1786151380374.jpg",
     "text": "[STATUS PEMULIHAN AKHIR] Seluruh segmen server utama (IP 157 & 203) kini telah berhasil dipulihkan dan kembali online secara penuh—kami tegaskan bahwa infrastruktur server fisik dan virtual dalam kondisi aman, tidak terhapus, serta beroperasi normal. Namun, sebagai konsekuensi dari proses karantina dan pembersihan malware secara agresif pada sistem file, dengan menyesal kami informasikan bahwa sebagian besar data dan dokumen pengguna pada segmen yang terdampak dinyatakan hilang permanen dan tidak dapat direcovery. Kami sangat menyarankan seluruh pengguna untuk segera memeriksa integritas sistem masing-masing serta melakukan restorasi data dari cadangan (backup) terbaru yang tersedia. Kami menyampaikan permohonan maaf yang sebesar-besarnya atas kehilangan data ini dan mengucapkan terima kasih yang tulus atas pengertian, kepercayaan, serta kesabaran Anda selama masa pemulihan. - Tim Support Bimxyz"
+  },
+  {
+    "date": "2026-08-15T07:51:05.521Z",
+    "title": "Gangguan server basic",
+    "status": "critical",
+    "image": "https://www.bimxyz.my.id/image/status-1786780259342.jpg",
+    "text": "Saat ini server basic terjadi kendala (masal) yang masih belum diketahui, mohon bersabar untuk proses investigasi pihak provider!"
   }
 ]
