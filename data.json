@@ -40,5 +40,11 @@
     "status": "critical",
     "image": "https://www.bimxyz.my.id/image/status-1786780259342.jpg",
     "text": "Yth. Pelanggan Setia Kami,\n\nKami menginformasikan bahwa saat ini sedang terjadi gangguan teknis mendadak pada infrastruktur server kami yang berdampak pada akses layanan.\n\nSaat ini tim IT kami sedang melakukan tindakan penanganan dan isolasi darurat untuk memastikan keamanan data serta memulihkan sistem secepat mungkin.\n\nKeamanan Data: Tim teknis kami memprioritaskan keamanan seluruh data dan sistem pengguna dalam proses pemulihan ini.\n\nKami memohon maaf yang sebesar-besarnya atas ketidaknyamanan yang ditimbulkan. Pembaruan informasi (update) terkait perkembangan pemulihan akan kami sampaikan"
+  },
+  {
+    "date": "2026-08-19T13:19:12.276Z",
+    "title": "Layanan server basic sudah kembali normal",
+    "status": "operational",
+    "text": "Seluruh segmen server basic  kini telah berhasil dipulihkan dan kembali online secara penuh—kami tegaskan bahwa infrastruktur server fisik dan virtual dalam kondisi aman, tidak terhapus, serta beroperasi normal. Namun, sebagai konsekuensi dari proses karantina dan pembersihan malware secara agresif pada sistem file, dengan menyesal kami informasikan bahwa sebagian besar data dan dokumen pengguna pada segmen yang terdampak dinyatakan hilang permanen dan tidak dapat direcovery. Kami sangat menyarankan seluruh pengguna untuk segera memeriksa integritas sistem masing-masing serta melakukan restorasi data dari cadangan (backup) terbaru yang tersedia. Kami menyampaikan permohonan maaf yang sebesar-besarnya atas kehilangan data ini dan mengucapkan terima kasih yang tulus atas pengertian, kepercayaan, serta kesabaran Anda selama masa pemulihan. - Tim Support Bimxyz"
   }
 ]
