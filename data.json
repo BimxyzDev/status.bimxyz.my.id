@@ -46,5 +46,12 @@
     "title": "Layanan server basic sudah kembali normal",
     "status": "operational",
     "text": "Seluruh segmen server basic  kini telah berhasil dipulihkan dan kembali online secara penuh—kami tegaskan bahwa infrastruktur server fisik dan virtual dalam kondisi aman, tidak terhapus, serta beroperasi normal. Namun, sebagai konsekuensi dari proses karantina dan pembersihan malware secara agresif pada sistem file, dengan menyesal kami informasikan bahwa sebagian besar data dan dokumen pengguna pada segmen yang terdampak dinyatakan hilang permanen dan tidak dapat direcovery. Kami sangat menyarankan seluruh pengguna untuk segera memeriksa integritas sistem masing-masing serta melakukan restorasi data dari cadangan (backup) terbaru yang tersedia. Kami menyampaikan permohonan maaf yang sebesar-besarnya atas kehilangan data ini dan mengucapkan terima kasih yang tulus atas pengertian, kepercayaan, serta kesabaran Anda selama masa pemulihan. - Tim Support Bimxyz"
+  },
+  {
+    "date": "2026-09-22T22:59:36.554Z",
+    "title": "GANGGUAN SERVER BASIC",
+    "status": "critical",
+    "image": "https://www.bimxyz.id/image/status-1790117971026.jpg",
+    "text": "Terjadi gangguan pada server basic, gangguan tersebut murni dari penyedia layanan server, para pengguna diharapkan untuk menunggu info lebih lanjut mengenai gangguan yang sedang terjadi."
   }
 ]
