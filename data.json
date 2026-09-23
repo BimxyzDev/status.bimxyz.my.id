@@ -53,5 +53,11 @@
     "status": "critical",
     "image": "https://www.bimxyz.id/image/status-1790117971026.jpg",
     "text": "Terjadi gangguan pada server basic, gangguan tersebut murni dari penyedia layanan server, para pengguna diharapkan untuk menunggu info lebih lanjut mengenai gangguan yang sedang terjadi."
+  },
+  {
+    "date": "2026-09-23T00:43:40.995Z",
+    "title": "UPDATE GANGGUAN SERVER BASIC",
+    "status": "operational",
+    "text": "Saat ini semua node sudah berjalan dengan normal, semua data user sudah dipastikan aman."
   }
 ]
