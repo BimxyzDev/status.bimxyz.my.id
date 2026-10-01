@@ -72,5 +72,11 @@
     "title": "Update Status Layanan Node BASIC",
     "status": "operational",
     "text": "Saat ini lihat Penyedia Layanan telah mengkonfirmasi bahwa server telah berjalan kembali dengan normal, semua data user dipastikan tetap aman, terimakasih telah bersabar menunggu."
+  },
+  {
+    "date": "2026-10-01T14:17:40.956Z",
+    "title": "PEMINDAHAN URL LOGIN PANEL",
+    "status": "operational",
+    "text": "PEMBERITAHUAN MIGRASI SISTEM: Demi meningkatkan kestabilan infrastruktur dan efisiensi layanan, seluruh akses Panel Pterodactyl resmi dipindahkan ke URL baru https://ptero.bimxyz.id (domain lama pterodactyl.server.bimxyz.my.id telah dinonaktifkan sepenuhnya; seluruh data, node, dan konfigurasi server Anda dipastikan tetap aman dan berjalan normal tanpa hambatan)."
   }
 ]
