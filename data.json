@@ -78,5 +78,11 @@
     "title": "PEMINDAHAN URL LOGIN PANEL",
     "status": "operational",
     "text": "PEMBERITAHUAN MIGRASI SISTEM: Demi meningkatkan kestabilan infrastruktur dan efisiensi layanan, seluruh akses Panel Pterodactyl resmi dipindahkan ke URL baru https://ptero.bimxyz.id (domain lama pterodactyl.server.bimxyz.my.id telah dinonaktifkan sepenuhnya; seluruh data, node, dan konfigurasi server Anda dipastikan tetap aman dan berjalan normal tanpa hambatan)."
+  },
+  {
+    "date": "2026-10-02T11:40:10.103Z",
+    "title": "📢 PEMBERITAHUAN GANGGUAN SERVER PANEL",
+    "status": "critical",
+    "text": "Saat ini akses Panel Pterodactyl Bimxyz sedang mengalami gangguan akses sehingga panel tidak dapat diakses oleh sebagian pengguna. Tim kami sedang berkoordinasi dengan provider melalui ticket untuk melakukan pengecekan dan penanganan pada sisi server maupun jaringan. Selama proses perbaikan berlangsung, mohon menunggu dan tidak perlu melakukan tindakan apa pun dari sisi pengguna. Informasi perkembangan dan pemberitahuan layanan kembali normal akan kami sampaikan melalui channel resmi Bimxyz. Terima kasih atas pengertiannya. 🙏"
   }
 ]
