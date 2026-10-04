@@ -90,5 +90,11 @@
     "title": "📢 UPDATE GANGGUAN SERVER PANEL",
     "status": "operational",
     "text": "Akses Ke Panel Bimxyz saat ini sudah kembali normal dan dapat diakses seperti biasa. Gangguan sebelumnya telah selesai ditangani setelah dilakukan pengecekan pada sisi server dan jaringan bersama provider. Seluruh layanan secara bertahap telah kembali berjalan normal. Terima kasih atas kesabaran dan pengertiannya selama proses penanganan. 🙏"
+  },
+  {
+    "date": "2026-10-04T09:56:56.191Z",
+    "title": "⚠️ PEMBERITAHUAN GANGGUAN",
+    "status": "degraded",
+    "text": "Layanan Bimxyz Official saat ini sedang mengalami gangguan pada server Panel yang menyebabkan akses Panel tidak stabil, sehingga sebagian pengguna mungkin mengalami timeout atau tidak dapat membuka Panel. Gangguan ini murni berasal dari sisi penyedia/provider server dan bukan disebabkan oleh sistem Bimxyz Official. Saat ini seluruh server/node Wings tetap berjalan normal dan server milik buyer tetap aktif, sehingga layanan yang sedang berjalan tidak terdampak; kendala hanya terjadi pada akses ke Panel. Tim sedang berkoordinasi dan melakukan pengecekan untuk memantau serta memulihkan akses secepatnya. Mohon menunggu hingga layanan Panel kembali stabil dan tidak perlu melakukan restart pada server yang sedang berjalan."
   }
 ]
