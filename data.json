@@ -96,5 +96,11 @@
     "title": "⚠️ PEMBERITAHUAN GANGGUAN",
     "status": "degraded",
     "text": "Layanan Bimxyz Official saat ini sedang mengalami gangguan pada server Panel yang menyebabkan akses Panel tidak stabil, sehingga sebagian pengguna mungkin mengalami timeout atau tidak dapat membuka Panel. Gangguan ini murni berasal dari sisi penyedia/provider server dan bukan disebabkan oleh sistem Bimxyz Official. Saat ini seluruh server/node Wings tetap berjalan normal dan server milik buyer tetap aktif, sehingga layanan yang sedang berjalan tidak terdampak; kendala hanya terjadi pada akses ke Panel. Tim sedang berkoordinasi dan melakukan pengecekan untuk memantau serta memulihkan akses secepatnya. Mohon menunggu hingga layanan Panel kembali stabil dan tidak perlu melakukan restart pada server yang sedang berjalan."
+  },
+  {
+    "date": "2026-10-08T12:53:08.164Z",
+    "title": "DOWNTIME NODE BASIC",
+    "status": "maintenance",
+    "text": "Layanan node basic saat ini mengalami downtime oleh pihak provider, semua layanan akan kembali normal setelah beberapa saat, mohon para pengguna node basic untuk tidak panik ataupun spam tiket ke admin."
   }
 ]
