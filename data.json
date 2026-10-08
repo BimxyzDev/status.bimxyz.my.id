@@ -102,5 +102,11 @@
     "title": "DOWNTIME NODE BASIC",
     "status": "maintenance",
     "text": "Layanan node basic saat ini mengalami downtime oleh pihak provider, semua layanan akan kembali normal setelah beberapa saat, mohon para pengguna node basic untuk tidak panik ataupun spam tiket ke admin."
+  },
+  {
+    "date": "2026-10-08T14:12:56.818Z",
+    "title": "UPDATE DOWNTIME NODE BASIC",
+    "status": "operational",
+    "text": "Saat ini node server basic telah berjalan normal, semua container/server sudah online secara bertahap, terimakasih telah menunggu."
   }
 ]
