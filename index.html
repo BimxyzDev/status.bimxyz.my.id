@@ -659,6 +659,11 @@
         gap: 30px;
       }
 
+      .server-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .server-nodes { grid-template-columns: 1fr; }
+      .page-tabs { width: 100%; }
+      .page-tab { flex: 1; }
+
       .footer-grid > :first-child {
         grid-column: auto;
       }
@@ -686,6 +691,12 @@
   </header>
 
   <main class="shell">
+    <nav class="page-tabs" aria-label="Halaman status">
+      <button class="page-tab" type="button" data-page="news" aria-selected="true">News</button>
+      <button class="page-tab" type="button" data-page="server" aria-selected="false">Server</button>
+    </nav>
+
+    <div class="page-panel" id="newsPage">
     <section class="hero" aria-labelledby="page-title">
       <div>
         <div class="eyebrow">
@@ -727,6 +738,53 @@
       <div class="timeline" id="timeline">
         <div class="state-msg">Memuat riwayat status...</div>
       </div>
+    </section>
+    </div>
+
+    <section class="page-panel" id="serverPage" hidden aria-labelledby="server-title">
+      <div class="hero" style="grid-template-columns:minmax(0,1fr) auto">
+        <div>
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Infrastructure · Live</div>
+          <h1 id="server-title">Status Server</h1>
+          <p class="hero-copy">Pantau penggunaan CPU, RAM, dan disk pada node Bimxyz Official.</p>
+        </div>
+        <div class="last-updated">
+          <div class="last-updated-label">Terakhir diperbarui</div>
+          <div class="last-updated-value" id="serverUpdated">Memuat...</div>
+        </div>
+      </div>
+
+      <div class="overall" id="serverOverall" aria-live="polite">
+        <div class="overall-dot" id="serverOverallDot"></div>
+        <div class="overall-copy">
+          <strong id="serverOverallTitle">Memuat status server...</strong>
+          <span id="serverOverallSub">Mengambil data dari node aggregator.</span>
+        </div>
+      </div>
+
+      <section class="status-area" aria-labelledby="server-summary-title">
+        <div class="section-head"><div>
+          <div class="section-kicker">Resource overview</div>
+          <h2 class="section-title" id="server-summary-title">Ringkasan Resource</h2>
+        </div></div>
+        <div class="server-summary">
+          <div class="server-stat"><div class="server-stat-label">Node Online</div><div class="server-stat-value" id="nodeOnline">—</div></div>
+          <div class="server-stat"><div class="server-stat-label">Rata-rata CPU</div><div class="server-stat-value" id="nodeCpu">—</div></div>
+          <div class="server-stat"><div class="server-stat-label">RAM Terpakai</div><div class="server-stat-value" id="nodeRam">—</div></div>
+          <div class="server-stat"><div class="server-stat-label">Disk Terpakai</div><div class="server-stat-value" id="nodeDisk">—</div></div>
+        </div>
+      </section>
+
+      <section class="status-area" aria-labelledby="server-nodes-title">
+        <div class="section-head"><div>
+          <div class="section-kicker">Node monitoring</div>
+          <h2 class="section-title" id="server-nodes-title">Daftar Node</h2>
+        </div></div>
+        <div class="server-nodes" id="serverNodes" aria-live="polite">
+          <div class="state-msg">Memuat data node...</div>
+        </div>
+        <div class="server-meta" id="serverMeta">Pembaruan otomatis setiap 5 detik.</div>
+      </section>
     </section>
   </main>
 
@@ -793,7 +851,10 @@
   </footer>
 
   <script>
-    const DATA_URL = "data.json";
+    const DATA_URL = "https://raw.githubusercontent.com/BimxyzDev/status.bimxyz.my.id/refs/heads/main/data.json";
+    const NODES_URL = "http://m.bimxyz.my.id:4000/api/nodes";
+    let activePage = "news";
+    let nodeRefreshTimer = null;
 
     const STATUS_LABEL = {
       operational: "Normal",
@@ -988,7 +1049,140 @@
       }
     }
 
+
+    function setPage(page) {
+      activePage = page === "server" ? "server" : "news";
+      document.getElementById("newsPage").hidden = activePage !== "news";
+      document.getElementById("serverPage").hidden = activePage !== "server";
+      document.querySelectorAll("[data-page]").forEach((button) => {
+        button.setAttribute("aria-selected", String(button.dataset.page === activePage));
+      });
+      if (nodeRefreshTimer) clearInterval(nodeRefreshTimer);
+      if (activePage === "server") {
+        loadNodes();
+        nodeRefreshTimer = setInterval(loadNodes, 5000);
+      } else {
+        nodeRefreshTimer = null;
+      }
+    }
+
+    document.querySelectorAll("[data-page]").forEach((button) => {
+      button.addEventListener("click", () => setPage(button.dataset.page));
+    });
+
+    function bytesGB(value) {
+      return Number.isFinite(value) ? (value / 1073741824).toFixed(1) : "—";
+    }
+
+    function percentText(value) {
+      return Number.isFinite(value) ? value.toFixed(1) + "%" : "—";
+    }
+
+    function uptimeText(seconds) {
+      if (!Number.isFinite(seconds)) return "—";
+      const days = Math.floor(seconds / 86400);
+      const hours = Math.floor((seconds % 86400) / 3600);
+      const minutes = Math.floor((seconds % 3600) / 60);
+      return (days ? days + "h " : "") + hours + "j " + minutes + "m";
+    }
+
+    function metricRow(label, value) {
+      const percent = Number.isFinite(value) ? Math.max(0, Math.min(100, value)) : 0;
+      const level = percent >= 85 ? "high" : percent >= 70 ? "mid" : "";
+      return `<div class="server-metric">
+        <span class="server-metric-label">${label}</span>
+        <div class="server-track"><div class="server-fill ${level}" style="width:${percent}%"></div></div>
+        <span class="server-metric-value">${percentText(value)}</span>
+      </div>`;
+    }
+
+    function renderNode(node) {
+      if (node.status !== "online") {
+        return `<article class="server-node offline">
+          <div class="server-node-head">
+            <div><div class="server-node-name">${escapeHtml(node.name || "Node")}</div>
+            <div class="server-node-sub">Resource tidak tersedia</div></div>
+            <span class="server-badge offline">OFFLINE</span>
+          </div>
+          <div class="server-error">${escapeHtml(node.error || "Agent unreachable")}</div>
+        </article>`;
+      }
+
+      const data = node.data || {};
+      const cpu = data.cpu || {};
+      const memory = data.memory || {};
+      const disk = data.disk || {};
+      return `<article class="server-node">
+        <div class="server-node-head">
+          <div><div class="server-node-name">${escapeHtml(node.name || "Node")}</div>
+          <div class="server-node-sub">${escapeHtml(cpu.cores ?? "—")} Core · Uptime ${uptimeText(data.uptimeSeconds)}</div></div>
+          <span class="server-badge">ONLINE</span>
+        </div>
+        ${metricRow("CPU", cpu.percent)}
+        ${metricRow("RAM", memory.usedPercent)}
+        ${metricRow("Disk", disk.usedPercent)}
+        <div class="server-node-foot">
+          <span>RAM <strong>${bytesGB(memory.usedBytes)}/${bytesGB(memory.totalBytes)} GB</strong></span>
+          <span>Disk <strong>${bytesGB(disk.usedBytes)}/${bytesGB(disk.totalBytes)} GB</strong></span>
+        </div>
+      </article>`;
+    }
+
+    async function loadNodes() {
+      const container = document.getElementById("serverNodes");
+      try {
+        const response = await fetch(NODES_URL, { cache: "no-store" });
+        if (!response.ok) throw new Error("HTTP " + response.status);
+        const payload = await response.json();
+        if (!payload || payload.ok !== true || !Array.isArray(payload.nodes)) {
+          throw new Error("Format respons node tidak valid");
+        }
+
+        const nodes = payload.nodes;
+        const online = nodes.filter((node) => node.status === "online");
+        const cpus = online.map((node) => node.data?.cpu?.percent)
+          .filter((value) => Number.isFinite(value));
+        const sum = (selector) => online.reduce((total, node) => {
+          const value = selector(node.data || {});
+          return total + (Number.isFinite(value) ? value : 0);
+        }, 0);
+
+        document.getElementById("nodeOnline").textContent = `${online.length}/${nodes.length}`;
+        document.getElementById("nodeCpu").textContent = cpus.length
+          ? percentText(cpus.reduce((total, value) => total + value, 0) / cpus.length) : "—";
+        document.getElementById("nodeRam").textContent =
+          bytesGB(sum((data) => data.memory?.usedBytes)) + " GB";
+        document.getElementById("nodeDisk").textContent =
+          bytesGB(sum((data) => data.disk?.usedBytes)) + " GB";
+        document.getElementById("serverUpdated").textContent =
+          payload.timestamp ? new Date(payload.timestamp).toLocaleTimeString("id-ID") : "Tidak diketahui";
+        container.innerHTML = nodes.length
+          ? nodes.map(renderNode).join("")
+          : '<div class="state-msg">Belum ada node yang dikonfigurasi.</div>';
+
+        const allOnline = nodes.length > 0 && online.length === nodes.length;
+        const dot = document.getElementById("serverOverallDot");
+        dot.className = "overall-dot" + (online.length === 0 ? " bad" : allOnline ? "" : " warn");
+        document.getElementById("serverOverallTitle").textContent = allOnline
+          ? "Semua node berjalan normal"
+          : online.length === 0 ? "Semua node tidak terjangkau" : "Sebagian node mengalami gangguan";
+        document.getElementById("serverOverallSub").textContent =
+          `${online.length} dari ${nodes.length} node online. Data diperbarui otomatis setiap 5 detik.`;
+        document.getElementById("serverMeta").textContent =
+          "Sumber: node aggregator · Pembaruan terakhir " +
+          (payload.timestamp ? new Date(payload.timestamp).toLocaleString("id-ID") : "tidak diketahui");
+      } catch (error) {
+        console.error("Gagal memuat status node:", error);
+        container.innerHTML = `<div class="state-msg error">Gagal memuat data node. (${escapeHtml(error.message)})</div>`;
+        document.getElementById("serverUpdated").textContent = "Tidak tersedia";
+        document.getElementById("serverOverallDot").className = "overall-dot bad";
+        document.getElementById("serverOverallTitle").textContent = "Status server tidak tersedia";
+        document.getElementById("serverOverallSub").textContent = "Periksa koneksi ke node aggregator.";
+      }
+    }
+
     loadStatus();
+    setPage("news");
   </script>
 </body>
 </html>
