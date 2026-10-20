@@ -108,5 +108,12 @@
     "title": "UPDATE DOWNTIME NODE BASIC",
     "status": "operational",
     "text": "Saat ini node server basic telah berjalan normal, semua container/server sudah online secara bertahap, terimakasih telah menunggu."
+  },
+  {
+    "date": "2026-10-20T01:50:17.636Z",
+    "title": "MAINTENANCE SERVER INTEL 1 VIP",
+    "status": "maintenance",
+    "image": "https://www.bimxyz.id/image/status-1792461012195.jpg",
+    "text": "Semua node KVM sedang diperbarui oleh pihak provider untuk menerima kernel Linux terbaru. Setiap node akan di-boot ulang dengan aman, sehingga semua KVM harus dimatikan dengan benar. Setiap node biasanya membutuhkan waktu hingga 30 menit untuk menyelesaikan pematian dan boot ulang sepenuhnya, tetapi mungkin membutuhkan waktu lebih lama dalam beberapa situasi."
   }
 ]
