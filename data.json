@@ -127,5 +127,11 @@
     "title": "Maintenance penggantian IP address pada server basic",
     "status": "maintenance",
     "text": "Diberitahukan kepada seluruh pengguna layanan Server Basic bahwa pada tanggal 29 Oktober akan dilakukan pemeliharaan jaringan berupa penggantian IP Address, sehingga server akan mengalami downtime (tidak dapat diakses sementara waktu) selama proses migrasi berlangsung; seluruh data dan file container dipastikan tetap aman, dan IP Address terbaru akan segera diinformasikan setelah server kembali online—terima kasih atas pengertiannya."
+  },
+  {
+    "date": "2026-10-27T16:51:17.899Z",
+    "title": "Update Maintenance penggantian IP address pada server basic",
+    "status": "operational",
+    "text": "Diberitahukan kepada seluruh pengguna Server Basic bahwa proses pemeliharaan jaringan dan penggantian IP Address yang semula dijadwalkan pada 29 Oktober telah dipercepat dan resmi selesai pada hari ini, 27 Oktober; saat ini server sudah kembali online secara normal dengan seluruh data dipastikan aman, silakan cek panel Anda untuk melihat dan menyesuaikan koneksi ke IP Address yang baru—terima kasih atas pengertiannya!"
   }
 ]
