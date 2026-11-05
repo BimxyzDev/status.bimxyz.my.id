@@ -133,5 +133,11 @@
     "title": "Update Maintenance penggantian IP address pada server basic",
     "status": "operational",
     "text": "Diberitahukan kepada seluruh pengguna Server Basic bahwa proses pemeliharaan jaringan dan penggantian IP Address yang semula dijadwalkan pada 29 Oktober telah dipercepat dan resmi selesai pada hari ini, 27 Oktober; saat ini server sudah kembali online secara normal dengan seluruh data dipastikan aman, silakan cek panel Anda untuk melihat dan menyesuaikan koneksi ke IP Address yang baru—terima kasih atas pengertiannya!"
+  },
+  {
+    "date": "2026-11-05T10:54:02.938Z",
+    "title": "Pemberitahuan Maintenance Server: Optimalisasi Jaringan & Peningkatan Stabilitas Layanan Bimxyz Official",
+    "status": "maintenance",
+    "text": "Pemberitahuan Maintenance: Bimxyz Official akan melaksanakan maintenance optimalisasi jaringan server pada Kamis, 5 November 2026 pukul 18.30 WIB guna meningkatkan stabilitas dan performa layanan. Selama proses berlangsung, seluruh pengguna kemungkinan perlu melakukan login ulang ke dashboard setelah maintenance selesai. Kami pastikan seluruh data tetap aman dan server yang sedang berjalan tetap beroperasi normal di latar belakang, karena dampak maintenance hanya terbatas pada akses dashboard. Terima kasih atas pengertian dan kepercayaan Anda kepada Bimxyz Official."
   }
 ]
