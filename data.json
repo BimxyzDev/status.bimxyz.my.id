@@ -139,5 +139,11 @@
     "title": "Pemberitahuan Maintenance Server: Optimalisasi Jaringan & Peningkatan Stabilitas Layanan Bimxyz Official",
     "status": "maintenance",
     "text": "Pemberitahuan Maintenance: Bimxyz Official akan melaksanakan maintenance optimalisasi jaringan server pada Kamis, 5 November 2026 pukul 18.30 WIB guna meningkatkan stabilitas dan performa layanan. Selama proses berlangsung, seluruh pengguna kemungkinan perlu melakukan login ulang ke dashboard setelah maintenance selesai. Kami pastikan seluruh data tetap aman dan server yang sedang berjalan tetap beroperasi normal di latar belakang, karena dampak maintenance hanya terbatas pada akses dashboard. Terima kasih atas pengertian dan kepercayaan Anda kepada Bimxyz Official."
+  },
+  {
+    "date": "2026-11-05T11:58:29.164Z",
+    "title": "Update maintenance jaringan",
+    "status": "operational",
+    "text": "Maintenance optimalisasi jaringan server Bimxyz Official telah selesai dilaksanakan. Seluruh layanan kini kembali normal dan dapat diakses seperti biasa."
   }
 ]
