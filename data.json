@@ -145,5 +145,11 @@
     "title": "Update maintenance jaringan",
     "status": "operational",
     "text": "Maintenance optimalisasi jaringan server Bimxyz Official telah selesai dilaksanakan. Seluruh layanan kini kembali normal dan dapat diakses seperti biasa."
+  },
+  {
+    "date": "2026-11-24T07:44:54.608Z",
+    "title": "Gangguan node server basic",
+    "status": "critical",
+    "text": "⚠️ Salah satu node kami sedang mengalami gangguan jaringan dari pihak provider, sehingga console dan file manager di panel sementara tidak bisa diakses; kami sudah menghubungi provider dan akan update segera setelah pulih."
   }
 ]
