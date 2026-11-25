@@ -151,5 +151,11 @@
     "title": "Gangguan node server basic",
     "status": "critical",
     "text": "⚠️ Salah satu node kami sedang mengalami gangguan jaringan dari pihak provider, sehingga console dan file manager di panel sementara tidak bisa diakses; kami sudah menghubungi provider dan akan update segera setelah pulih."
+  },
+  {
+    "date": "2026-11-25T06:34:52.755Z",
+    "title": "Update layanan node basic",
+    "status": "operational",
+    "text": "Saat ini node basic sudah bisa digunakan dengan normal. Terimakasih telah sabar menunggu."
   }
 ]
